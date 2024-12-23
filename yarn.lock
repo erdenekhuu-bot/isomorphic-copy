@@ -1595,7 +1595,7 @@ normalize-range@^0.1.2:
 
 object-assign@^4.0.1, object-assign@^4.1.1:
   version "4.1.1"
-  resolved "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==
 
 object-hash@^3.0.0:
@@ -1883,7 +1883,7 @@ reusify@^1.0.4:
   resolved "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
-rizzui@^0.8.7:
+rizzui@^0.8.4:
   version "0.8.7"
   resolved "https://registry.yarnpkg.com/rizzui/-/rizzui-0.8.7.tgz#9264e11b23f5e3764f75e746e2094c59f5915bae"
   integrity sha512-97bRRyDd1/+mTixY1vmDYqTbbdHkT+T90+AgXoo+52jr5KuyYzaTaqLFx5bGI+kA5LshsQNy0dzBOKXGb2hgfA==
