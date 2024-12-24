@@ -4,6 +4,7 @@ import { updateThemeColor } from "../utils/update-theme-color";
 import {
   DEFAULT_PRESET_COLORS,
   DEFAULT_PRESET_COLOR_NAME,
+  usePresets,
 } from "../config/color-presets";
 
 function getLocalStoragePreset() {
@@ -60,4 +61,36 @@ export function useColorPresetName() {
       colorPresetName === null ? DEFAULT_PRESET_COLOR_NAME : colorPresetName,
     setColorPresetName,
   };
+}
+
+export function useApplyColorPreset<T extends Record<string, any>>(
+  colorPresets: T
+) {
+  const COLOR_PRESETS = usePresets();
+
+  useEffect(() => {
+    let colorLighter = COLOR_PRESETS[0].colors.lighter;
+    let colorLight = COLOR_PRESETS[0].colors.light;
+    let colorDefault = COLOR_PRESETS[0].colors.default;
+    let colorDark = COLOR_PRESETS[0].colors.dark;
+    let colorForeground = COLOR_PRESETS[0].colors.foreground;
+
+    if (colorPresets) {
+      colorLighter = colorPresets.lighter;
+      colorLight = colorPresets.light;
+      colorDefault = colorPresets.default;
+      colorDark = colorPresets.dark;
+      colorForeground = colorPresets.foreground;
+    }
+
+    updateThemeColor(
+      colorLighter,
+      colorLight,
+      colorDefault,
+      colorDark,
+      colorForeground
+    );
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [colorPresets]);
 }

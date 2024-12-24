@@ -3,6 +3,8 @@ import { useLayout } from "../../hooks/use-layout";
 import HeliumLayout from "../../layouts/helium/helium-layout";
 import HydrogenLayout from "../../layouts/hydrogen/layout";
 import LithiumLayout from "../../layouts/lithium/lithium-layout";
+import BerylLiumLayout from "../../layouts/beryllium/beryllium-layout";
+import BoronLayout from "../../layouts/boron/boron-layout";
 import { useIsMounted } from "../../hooks/use-is-mounted";
 
 type LayoutProps = {
@@ -27,12 +29,12 @@ function LayoutProvider({ children }: LayoutProps) {
   if (layout === LAYOUT_OPTIONS.LITHIUM) {
     return <LithiumLayout>{children}</LithiumLayout>;
   }
-  //   if (layout === LAYOUT_OPTIONS.BERYLLIUM) {
-  //     return <BerylLiumLayout>{children}</BerylLiumLayout>;
-  //   }
-  //   if (layout === LAYOUT_OPTIONS.BORON) {
-  //     return <BoronLayout>{children}</BoronLayout>;
-  //   }
+  if (layout === LAYOUT_OPTIONS.BERYLLIUM) {
+    return <BerylLiumLayout>{children}</BerylLiumLayout>;
+  }
+  if (layout === LAYOUT_OPTIONS.BORON) {
+    return <BoronLayout>{children}</BoronLayout>;
+  }
   //   if (layout === LAYOUT_OPTIONS.CARBON) {
   //     return <CarbonLayout>{children}</CarbonLayout>;
   //   }

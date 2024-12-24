@@ -4,6 +4,12 @@ import CogSolidIcon from "../icons/cog-solid";
 import { ActionIcon } from "rizzui";
 import cn from "../../utils/class-names";
 import DrawerHeader from "./drawer-header";
+import { usePresets } from "../../config/color-presets";
+import {
+  useApplyColorPreset,
+  useColorPresets,
+} from "../../hooks/use-theme-color";
+import { useDrawer } from "../../app/shared/drawer-views/use-drawer";
 
 export default function SettingsButton({
   className,
@@ -12,7 +18,10 @@ export default function SettingsButton({
   className?: string;
   children?: React.ReactNode;
 }) {
+  const COLOR_PRESETS = usePresets();
+
   const { direction } = useDirection();
+  const { colorPresets } = useColorPresets();
 
   useEffect(() => {
     document.documentElement.dir = direction ?? "ltr";
