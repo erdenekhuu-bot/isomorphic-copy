@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createTheme } from "@mui/material/styles";
 
 export const presetLight = {
   lighter: "#f1f1f1",
@@ -28,7 +28,12 @@ export const DEFAULT_PRESET_COLORS = {
 export const DEFAULT_PRESET_COLOR_NAME = "Blue";
 
 export const usePresets = () => {
-  const theme = "light";
+  // const theme = "light";
+  const theme = createTheme({
+    palette: {
+      mode: "light",
+    },
+  });
 
   return [
     {
@@ -38,12 +43,22 @@ export const usePresets = () => {
     {
       name: "Black",
       colors: {
-        lighter: theme === "light" ? presetLight.lighter : presetDark.lighter,
-        light: theme === "light" ? presetLight.light : presetDark.light,
-        default: theme === "light" ? presetLight.default : presetDark.default,
-        dark: theme === "light" ? presetLight.dark : presetDark.dark,
+        lighter:
+          theme.palette.mode === "light"
+            ? presetLight.lighter
+            : presetDark.lighter,
+        light:
+          theme.palette.mode === "light" ? presetLight.light : presetDark.light,
+        default:
+          theme.palette.mode === "light"
+            ? presetLight.default
+            : presetDark.default,
+        dark:
+          theme.palette.mode === "light" ? presetLight.dark : presetDark.dark,
         foreground:
-          theme === "light" ? presetLight.foreground : presetDark.foreground,
+          theme.palette.mode === "light"
+            ? presetLight.foreground
+            : presetDark.foreground,
       },
     },
     {

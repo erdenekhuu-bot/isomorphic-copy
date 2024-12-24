@@ -23,9 +23,9 @@ function LayoutProvider({ children }: LayoutProps) {
   if (layout === LAYOUT_OPTIONS.HELIUM) {
     return <HeliumLayout>{children}</HeliumLayout>;
   }
-  //   if (layout === LAYOUT_OPTIONS.LITHIUM) {
-  //     return <LithiumLayout>{children}</LithiumLayout>;
-  //   }
+  // if (layout === LAYOUT_OPTIONS.LITHIUM) {
+  //   return <LithiumLayout>{children}</LithiumLayout>;
+  // }
   //   if (layout === LAYOUT_OPTIONS.BERYLLIUM) {
   //     return <BerylLiumLayout>{children}</BerylLiumLayout>;
   //   }
