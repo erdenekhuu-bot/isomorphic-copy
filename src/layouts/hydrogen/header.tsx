@@ -4,6 +4,7 @@ import HamburgerButton from "../hamburger-button";
 import SearchWidget from "../../components/search/search";
 import Sidebar from "./sidebar";
 import StickyHeader from "../sticky-header";
+import HeaderMenuRight from "../header-menu-right";
 
 export default function Header() {
   return (
@@ -23,7 +24,7 @@ export default function Header() {
         <SearchWidget />
       </div>
 
-      {/* <HeaderMenuRight /> */}
+      <HeaderMenuRight />
     </StickyHeader>
   );
 }
