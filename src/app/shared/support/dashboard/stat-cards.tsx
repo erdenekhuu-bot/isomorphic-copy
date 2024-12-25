@@ -32,7 +32,11 @@ const ticketStats = [
   },
 ];
 
-export default function StatCards({ className }: { className?: string }) {
+export default function MetricCardsWithIcon({
+  className,
+}: {
+  className?: string;
+}) {
   return (
     <div
       className={cn("grid grid-cols-1 gap-5 3xl:gap-8 4xl:gap-9", className)}

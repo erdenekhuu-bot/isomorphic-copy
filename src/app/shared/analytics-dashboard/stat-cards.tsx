@@ -1,6 +1,7 @@
 import MetricCard from "../../../components/cards/metric-card";
 import { Text } from "rizzui";
 import cn from "../../../utils/class-names";
+import { BarChart, Bar, ResponsiveContainer } from "recharts";
 
 const trafficData = [
   {
@@ -162,3 +163,53 @@ const analyticsStatData = [
     chart: barData,
   },
 ];
+
+export default function MetricCardWithBarChart({
+  className,
+}: {
+  className?: string;
+}) {
+  return (
+    <div
+      className={cn("grid grid-cols-1 gap-5 3xl:gap-8 4xl:gap-9", className)}
+    >
+      {analyticsStatData.map((stat) => (
+        <MetricCard
+          key={stat.title + stat.id}
+          title={stat.title}
+          metric={stat.metric}
+          rounded="lg"
+          metricClassName="text-2xl mt-1"
+          info={
+            <Text className="mt-4 max-w-[150px] text-sm text-gray-500">
+              {stat.info}
+            </Text>
+          }
+          chart={
+            <>
+              <div
+                style={{ color: stat.fill }}
+                className="mb-3 text-sm font-medium"
+              >
+                {stat.percentage}%
+              </div>
+              <div className="h-12 w-20 @[16.25rem]:h-16 @[16.25rem]:w-24 @xs:h-20 @xs:w-28">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart barSize={6} barGap={5} data={stat.chart}>
+                    <Bar
+                      dataKey="sale"
+                      fill={stat.fill}
+                      radius={[2, 2, 0, 0]}
+                    />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </>
+          }
+          chartClassName="flex flex-col w-auto h-auto text-center"
+          className="@container @7xl:text-[15px] [&>div]:items-end"
+        />
+      ))}
+    </div>
+  );
+}
