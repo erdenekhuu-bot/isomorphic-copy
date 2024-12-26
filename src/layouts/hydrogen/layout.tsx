@@ -1,6 +1,7 @@
 import Header from "./header";
 import Sidebar from "./sidebar";
 import FileDashboardPage from "../../app/(hydrogen)/page";
+import AppointmentPage from "../../app/(hydrogen)/appointment/page";
 
 export default function HydrogenLayout({
   children,
