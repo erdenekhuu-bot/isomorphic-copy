@@ -1,7 +1,7 @@
 import cn from "../../utils/class-names";
 import SimpleBar from "../../components/ui/simplebar";
 import Logo from "../../components/logo";
-import { Link } from "react-router-dom";
+import { SidebarMenu } from "./sidebar-menu";
 
 export default function Sidebar({ className }: { className?: string }) {
   return (
@@ -21,9 +21,9 @@ export default function Sidebar({ className }: { className?: string }) {
         </a>
       </div>
 
-      {/* <SimpleBar className="h-[calc(100%-80px)]">
-          <SidebarMenu />
-        </SimpleBar> */}
+      <SimpleBar className="h-[calc(100%-80px)]">
+        <SidebarMenu />
+      </SimpleBar>
     </aside>
   );
 }
