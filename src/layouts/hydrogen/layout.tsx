@@ -7,6 +7,7 @@ import JobBoardPage from "../../app/(hydrogen)/job-board/page";
 import FinancialPage from "../../app/(hydrogen)/financial/page";
 import LogisticsPage from "../../app/(hydrogen)/logistics/page";
 import EcommerceDashboardPage from "../../app/(hydrogen)/ecommerce/page";
+import AnalyticsPage from "../../app/(hydrogen)/analytics/page";
 
 export default function HydrogenLayout({
   children,
@@ -20,7 +21,7 @@ export default function HydrogenLayout({
         <Header />
         <div className="flex flex-grow flex-col px-4 pb-6 pt-2 md:px-5 lg:px-6 lg:pb-8 3xl:px-8 3xl:pt-4 4xl:px-10 4xl:pb-9">
           {/* {children} */}
-          <EcommerceDashboardPage />
+          <AnalyticsPage />
         </div>
       </div>
     </main>
