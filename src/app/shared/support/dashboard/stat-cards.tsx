@@ -1,7 +1,7 @@
 import cn from "../../../../utils/class-names";
 import TicketIcon from "../../../../components/icons/ticket";
 import TagIcon from "../../../../components/icons/tag";
-import MetricCard from "../../../../components/cards/metric-card";
+import MetricCard from "./stat-card";
 import TagIcon2 from "../../../../components/icons/tag-2";
 import TagIcon3 from "../../../../components/icons/tag-3";
 
@@ -32,11 +32,7 @@ const ticketStats = [
   },
 ];
 
-export default function MetricCardsWithIcon({
-  className,
-}: {
-  className?: string;
-}) {
+export default function StatCards({ className }: { className?: string }) {
   return (
     <div
       className={cn("grid grid-cols-1 gap-5 3xl:gap-8 4xl:gap-9", className)}
