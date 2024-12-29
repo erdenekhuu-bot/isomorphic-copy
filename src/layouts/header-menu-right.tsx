@@ -2,7 +2,7 @@ import { Badge, ActionIcon } from "rizzui";
 import MessagesDropdown from "./messages-dropdown";
 import ProfileMenu from "./profile-menu";
 import SettingsButton from "../components/settings/settings-button";
-import RingBellSolidIcon from "../components/icons/ring-bell-slid";
+import RingBellSolidIcon from "../components/icons/ring-bell-solid";
 import ChatSolidIcon from "../components/icons/chat-solid";
 
 export default function HeaderMenuRight() {

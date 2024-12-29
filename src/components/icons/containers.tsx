@@ -1,4 +1,4 @@
-export default function ContainersIcon({
+export default function Containers({
   ...props
 }: React.SVGProps<SVGSVGElement>) {
   return (
