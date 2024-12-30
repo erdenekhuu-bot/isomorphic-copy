@@ -19,7 +19,7 @@ export default function HydrogenLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="flex min-h-screen flex-grow">
+    <main className="flex min-h-screen flex-grow ">
       <Sidebar className="fixed hidden dark:bg-gray-50 xl:block" />
       <div className="flex w-full flex-col xl:ms-[270px] xl:w-[calc(100%-270px)] 2xl:ms-72 2xl:w-[calc(100%-288px)]">
         <Header />
@@ -40,7 +40,6 @@ export default function HydrogenLayout({
             <Route path="/analytics" element={<AnalyticsPage />} />
             <Route path="/support" element={<SupportDashboardPage />} />
           </Routes>
-          {/* {children} */}
         </div>
       </div>
     </main>
