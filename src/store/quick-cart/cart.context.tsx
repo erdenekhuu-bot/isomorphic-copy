@@ -31,7 +31,6 @@ export const cartContext = createContext<CartProviderState | undefined>(
 );
 
 cartContext.displayName = "CartContext";
-
 export const useCart = () => {
   const context = useContext(cartContext);
   if (context === undefined) {
