@@ -29,7 +29,6 @@ interface CartProviderState extends State {
 export const cartContext = createContext<CartProviderState | undefined>(
   undefined
 );
-
 cartContext.displayName = "CartContext";
 export const useCart = () => {
   const context = useContext(cartContext);
