@@ -9,7 +9,9 @@ import LogisticsPage from "../../app/(hydrogen)/logistics/page";
 import EcommerceDashboardPage from "../../app/(hydrogen)/ecommerce/page";
 import AnalyticsPage from "../../app/(hydrogen)/analytics/page";
 import SupportDashboardPage from "../../app/(hydrogen)/support/page";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CheckoutPage from "../../app/(hydrogen)/ecommerce/checkout/page";
+import CartPage from "../../app/(hydrogen)/ecommerce/cart/page";
+import { Routes, Route } from "react-router-dom";
 
 export default function HydrogenLayout({
   children,
@@ -29,7 +31,12 @@ export default function HydrogenLayout({
             <Route path="/job-board" element={<JobBoardPage />} />
             <Route path="/financial" element={<FinancialPage />} />
             <Route path="/logistics" element={<LogisticsPage />} />
-            <Route path="/ecommerce" element={<EcommerceDashboardPage />} />
+
+            <Route path="/ecommerce" element={<EcommerceDashboardPage />}>
+              <Route path="checkout" element={<CheckoutPage />} />
+              <Route path="cart" element={<CartPage />} />
+            </Route>
+
             <Route path="/analytics" element={<AnalyticsPage />} />
             <Route path="/support" element={<SupportDashboardPage />} />
           </Routes>
