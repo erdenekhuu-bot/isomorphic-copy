@@ -7,6 +7,7 @@ import ActivityReport from "./activity-report";
 import Members from "./members";
 import RecentActivities from "./recent-activities";
 import UpgradeStorage from "./upgrade-storage";
+import FileListTable from "./file-list/table";
 
 export default function FileDashboard() {
   return (
@@ -22,14 +23,14 @@ export default function FileDashboard() {
           <QuickAccess />
           <RecentFiles />
           <ActivityReport />
-          {/* <FileListTable /> */}
+          <FileListTable />
         </div>
 
-        {/* <div className="col-span-full flex flex-col gap-6 @5xl:col-span-4 2xl:gap-8 3xl:col-span-3">
+        <div className="col-span-full flex flex-col gap-6 @5xl:col-span-4 2xl:gap-8 3xl:col-span-3">
           <RecentActivities />
           <Members />
           <UpgradeStorage />
-        </div> */}
+        </div>
       </div>
     </div>
   );
