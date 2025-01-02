@@ -11,6 +11,7 @@ import AnalyticsPage from "../../app/(hydrogen)/analytics/page";
 import SupportDashboardPage from "../../app/(hydrogen)/support/page";
 import CheckoutPage from "../../app/(hydrogen)/ecommerce/checkout/page";
 import CartPage from "../../app/(hydrogen)/ecommerce/cart/page";
+import ProfilePage from "../../app/(hydrogen)/profile/page";
 import { Routes, Route } from "react-router-dom";
 
 export default function HydrogenLayout({
@@ -39,6 +40,7 @@ export default function HydrogenLayout({
 
             <Route path="/analytics" element={<AnalyticsPage />} />
             <Route path="/support" element={<SupportDashboardPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
           </Routes>
         </div>
       </div>
