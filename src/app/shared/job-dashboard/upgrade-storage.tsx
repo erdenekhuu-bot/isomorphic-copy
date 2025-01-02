@@ -1,5 +1,5 @@
 import { PiArrowCircleUpFill } from "react-icons/pi";
-import UpStorageImg from "../../../../public/upgrade-plan.webp";
+import UpStorageImg from "../../../public/upgrade-plan.webp";
 import { routes } from "../../../config/routes";
 import { Title } from "rizzui";
 

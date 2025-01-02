@@ -11,7 +11,7 @@ import PromotionalSales from "./promotional-sales";
 import RecentOrder from "./recent-order";
 import StockReport from "./stock-report";
 import { PiPlusBold } from "react-icons/pi";
-import welcomeImg from "../../../../../public/shop-illustration.png";
+import welcomeImg from "../../../../public/shop-illustration.png";
 import HandWaveIcon from "../../../../components/icons/hand-wave";
 
 export default function EcommerceDashboard() {

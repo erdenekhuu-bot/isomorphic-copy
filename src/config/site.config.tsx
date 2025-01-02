@@ -1,6 +1,6 @@
 import { LAYOUT_OPTIONS } from "./enums";
-import logoImg from "../../public/logo.svg";
-import logoIconImg from "../../public/logo-short.svg";
+import logoImg from "../public/logo.svg";
+import logoIconImg from "../public/logo-short.svg";
 
 enum MODE {
   DARK = "dark",
