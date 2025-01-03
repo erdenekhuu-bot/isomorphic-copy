@@ -19,6 +19,8 @@ import EnhancedTablePage from "../../app/(hydrogen)/tables/enhanced/page";
 import StickyTablePage from "../../app/(hydrogen)/tables/sticky-header/page";
 import PaginationTablePage from "../../app/(hydrogen)/tables/pagination/page";
 import SearchTablePage from "../../app/(hydrogen)/tables/search/page";
+import TanStackTableBasic from "../../app/(hydrogen)/tables/tan-table/page";
+import TanStackTableCollapsible from "../../app/(hydrogen)/tables/tan-table-collapsible/page";
 
 export default function HydrogenLayout({
   children,
@@ -54,6 +56,11 @@ export default function HydrogenLayout({
               <Route path="sticky-header" element={<StickyTablePage />} />
               <Route path="pagination" element={<PaginationTablePage />} />
               <Route path="search" element={<SearchTablePage />} />
+              <Route path="tan-table" element={<TanStackTableBasic />} />
+              <Route
+                path="tan-table-collapsible"
+                element={<TanStackTableCollapsible />}
+              />
             </Route>
           </Routes>
         </div>
