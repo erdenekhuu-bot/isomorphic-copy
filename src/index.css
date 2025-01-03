@@ -886,6 +886,615 @@ td.rc-table-cell-fix-right {
 .text_editor .rdw-editor-wrapper .rdw-editor-main .public-DraftEditor-content {
   @apply px-4 py-3 text-gray-700;
 }
-/* .text_editor .rdw-editor-wrapper .rdw-editor-toolbar > div {
+.text_editor .rdw-editor-wrapper .rdw-editor-toolbar > div {
   @apply m-1.5 rounded border border-gray-100 @lg:m-1;
+}
+
+.text_editor
+  .rdw-editor-wrapper
+  .rdw-editor-toolbar
+  > div
+  > .rdw-option-wrapper {
+  @apply h-9 w-10 w-9 border-0 border-r border-gray-100 last:border-r-0 hover:bg-gray-50 hover:shadow-none @lg:m-0;
+}
+
+.text_editor
+  .rdw-editor-wrapper
+  .rdw-editor-toolbar
+  > div
+  > .rdw-option-wrapper.rdw-option-active {
+  @apply bg-gray-100 shadow-none;
+}
+
+.text_editor
+  .rdw-editor-wrapper
+  .rdw-editor-main
+  .public-DraftStyleDefault-block {
+  @apply m-0;
+}
+
+.radial-progress-bar {
+  background: radial-gradient(closest-side, #f1f1f1 85%, transparent 90% 100%),
+    conic-gradient(var(--progress-bg) var(--progress-value), #ddd 0);
+}
+
+/* React Quill */
+.react-quill .ql-toolbar.ql-snow {
+  @apply flex flex-wrap items-center gap-1.5 rounded-t-md border-[1.8px] border-muted;
+}
+
+.react-quill .ql-container {
+  @apply font-inter;
+}
+
+.react-quill .ql-container.ql-snow {
+  @apply rounded-b-md border-[1.8px] border-muted;
+}
+
+.react-quill .ql-editor {
+  @apply max-h-96 overflow-y-auto;
+}
+
+.react-quill .ql-toolbar.ql-snow .ql-formats {
+  @apply mr-0;
+}
+
+.react-quill-toolbar-bottom {
+  @apply pb-[41px];
+}
+
+.react-quill-toolbar-bottom .ql-toolbar.ql-snow {
+  @apply absolute bottom-0 left-0 right-0 rounded-b-md rounded-t-none;
+}
+
+.react-quill-toolbar-bottom .ql-container.ql-snow {
+  @apply rounded-b-none rounded-t-md;
+}
+
+.react-quill-toolbar-bottom .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border-top: 1px solid;
+  @apply border-t-gray-300;
+}
+
+/** All toolbar buttons are inside of .ql-formats */
+.ql-formats button,
+.ql-formats > span {
+  position: relative;
+  /** Set a tooltip with css pseudo-elements, when buttons are hover, active or focus */
+}
+
+.ql-formats button:hover::before,
+.ql-formats > span:hover::before {
+  content: "";
+  @apply absolute left-1/2 top-[-9px] z-10 -translate-x-1/2 transform border-x-[7px] border-y-[6px] border-solid border-transparent border-t-[#0d1e42];
+}
+
+.ql-formats button:hover::after,
+.ql-formats > span:hover::after {
+  @apply absolute left-1/2 top-[-41px] z-50 -translate-x-1/2 whitespace-nowrap rounded-md bg-[#0d1e42] px-2.5 py-2 text-xs text-white;
+}
+
+/** Set tooltip content for toolbar options **/
+.ql-bold:hover::after {
+  content: "Bold";
+}
+
+.ql-italic:hover::after {
+  content: "Italic";
+}
+
+.ql-underline:hover::after {
+  content: "Underline";
+}
+
+.ql-strike:hover::after {
+  content: "Strikeout";
+}
+
+.ql-link:hover::after {
+  content: "Hyperlink";
+}
+
+.ql-blockquote:hover::after {
+  content: "Quote";
+}
+
+.ql-code-block:hover::after {
+  content: "Code Block";
+}
+
+.ql-list[value="bullet"]:hover::after {
+  content: "Bulleted List";
+}
+
+.ql-list[value="ordered"]:hover::after {
+  content: "Numbered List";
+}
+
+.ql-script[value="sub"]:hover::after {
+  content: "Sub Script";
+}
+
+.ql-script[value="super"]:hover::after {
+  content: "Super Script";
+}
+
+.ql-indent[value="-1"]:hover::after {
+  content: "Indent -1";
+}
+
+.ql-indent[value="+1"]:hover::after {
+  content: "Indent +1";
+}
+
+.ql-color:hover::after {
+  content: "Text Color";
+}
+
+.ql-background:hover::after {
+  content: "Background Color";
+}
+
+.ql-align:hover::after {
+  content: "Text Align";
+}
+
+.ql-clean:hover::after {
+  content: "Clear Formatting";
+}
+
+.ql-font:hover::after {
+  content: "Font Family";
+}
+
+/* react-quill responsive styles */
+/* .react-quill .ql-toolbar {
+  @apply flex 3xl:block 3xl:max-w-none;
+}
+.react-quill .ql-snow .ql-formats {
+  @apply flex lg:inline-flex lg:items-center;
 } */
+
+/* social btn shadow  */
+
+.social-btn-shadow {
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1))
+    drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.1));
+}
+
+.social-btn-shadow:hover {
+  filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.05))
+    drop-shadow(0px 20px 25px rgba(0, 0, 0, 0.05));
+}
+
+.social-btn-shadow {
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1))
+    drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.1));
+}
+
+.social-btn-shadow:hover {
+  filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.05))
+    drop-shadow(0px 20px 25px rgba(0, 0, 0, 0.05));
+}
+
+/* profile card swiper pagination  */
+.profileModalCarousel .swiper-pagination .swiper-pagination-bullet,
+.profileCarousel .swiper-pagination .swiper-pagination-bullet {
+  @apply h-2 w-2 rounded-full bg-white opacity-60 transition-all;
+}
+
+.profileModalCarousel .swiper-pagination .swiper-pagination-bullet-active,
+.profileCarousel .swiper-pagination .swiper-pagination-bullet-active {
+  @apply w-4 rounded-xl bg-white opacity-100;
+}
+
+/* colors filter  */
+.colors-filter input[type="checkbox"]:checked ~ svg {
+  @apply !hidden;
+}
+
+.rc-table-fixed-header thead th.rc-table-cell:nth-last-child(2) {
+  @apply rounded-ee-lg rounded-se-lg;
+}
+
+/* ................................................... */
+/* Recharts Base Styling */
+/* ................................................... */
+.recharts-wrapper .recharts-cartesian-axis-line {
+  @apply stroke-gray-200;
+}
+
+.recharts-wrapper .recharts-cartesian-axis-tick-value {
+  @apply fill-gray-400 text-xs;
+}
+
+.recharts-wrapper .recharts-cartesian-grid line {
+  @apply stroke-gray-300;
+}
+
+.recharts-wrapper .recharts-tooltip-cursor {
+  @apply opacity-20;
+}
+
+.recharts-wrapper .recharts-tooltip-cursor {
+  @apply dark:opacity-10;
+}
+
+.recharts-wrapper .recharts-brush rect:first-child {
+  @apply dark:fill-gray-400/50;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @apply dark:!text-gray-300;
+}
+
+/* ................................................... */
+/* Google Map Styles */
+/* ................................................... */
+
+/* .gmnoprint {
+  @apply hidden;
+} */
+div[style="z-index: 1000001;"],
+.gm-style-cc {
+  @apply hidden;
+}
+
+.pac-container {
+  @apply mt-4 rounded-lg border-t-0;
+}
+
+.pac-container:after {
+  content: none;
+}
+
+.pac-item {
+  @apply px-3 py-1.5 font-inter;
+}
+
+/* google location search auto complete  */
+/* .pac-container {
+  @apply w-full rounded-lg border border-gray-100 shadow after:hidden;
+}
+.pac-item {
+  @apply cursor-pointer py-3 pl-3 text-sm font-normal text-gray-300;
+}
+.pac-matched {
+  @apply text-sm text-gray-900;
+}
+.pac-icon {
+  @apply mt-0;
+} */
+
+/* checkout page payment card gradient  */
+.card-gradient {
+  background-image: linear-gradient(120deg, #fff 45%, #f5f5f5);
+}
+
+#nprogress .bar {
+  @apply !z-[9999] !bg-primary;
+}
+
+/* ................................................... */
+/* React Big Calendar Styles */
+/* ................................................... */
+.rbc-month-view {
+  @apply border-muted;
+}
+
+.rbc-header {
+  @apply h-12 border-muted py-3.5 text-[13px] font-semibold uppercase text-gray-400 lg:px-7;
+}
+
+:is(
+    .rbc-header + .rbc-header,
+    .rbc-day-bg + .rbc-day-bg,
+    .rbc-month-row + .rbc-month-row,
+    .rbc-timeslot-group
+  ) {
+  @apply border-muted;
+}
+
+.rbc-day-bg {
+  @apply sm:px-5;
+}
+
+.rbc-date-cell {
+  @apply p-2.5 text-left text-sm font-medium text-gray-700 md:p-5 md:text-lg;
+}
+
+.rbc-day-bg.rbc-off-range-bg {
+  @apply bg-gray-50;
+}
+
+.rbc-off-range {
+  @apply text-gray-400;
+}
+
+.rbc-time-header.rbc-overflowing,
+.rbc-time-view,
+.rbc-time-content,
+.rbc-time-header-content {
+  @apply border-t border-muted;
+}
+
+.rbc-today {
+  @apply bg-blue-lighter/10;
+}
+
+.rbc-day-slot .rbc-time-slot,
+.rbc-timeslot-group {
+  @apply border-muted dark:!border-gray-400;
+}
+
+.rbc-day-slot .rbc-time-slot {
+  @apply border-t-0;
+}
+
+.rbc-day-slot .rbc-event {
+  @apply !h-auto border-0;
+}
+.rbc-event,
+.rbc-day-slot .rbc-background-event {
+  @apply rounded-md bg-primary px-2 py-1.5 text-sm font-medium;
+}
+
+.rbc-time-view .rbc-row {
+  @apply h-12;
+}
+
+.rbc-time-content > * + * > * {
+  @apply border-l border-muted;
+}
+.rbc-timeslot-group {
+  @apply border-b border-muted;
+}
+
+.rbc-time-header.rbc-overflowing {
+  @apply !mr-0 border-r border-transparent lg:mr-3.5;
+}
+
+.rbc-day-slot .rbc-event,
+.rbc-day-slot .rbc-background-event {
+  flex-flow: column;
+}
+
+.rbc-time-header-content .rbc-row-content {
+  @apply mt-5;
+}
+
+.rbc-time-header-gutter {
+  @apply !w-20 !max-w-full;
+}
+
+.rbc-time-gutter .rbc-timeslot-group {
+  @apply px-3.5 py-2 font-medium text-gray-900;
+}
+
+.rbc-timeslot-group {
+  @apply font-medium text-gray-900;
+}
+
+.rbc-label {
+  @apply px-2;
+}
+
+.rbc-day-slot .rbc-time-slot + .rbc-time-slot {
+  @apply border-t border-muted;
+}
+
+.rbc-timeslot-group {
+  @apply min-h-[80px] border-muted;
+}
+.rbc-toolbar {
+  @apply mb-0 rounded-t-md border border-b-0 border-muted px-4 py-6;
+}
+
+.rbc-btn-group {
+  @apply rounded-md border border-muted;
+}
+
+.rbc-btn-group button {
+  @apply !m-0 !rounded-md border-0 text-sm font-medium text-gray-500 shadow-none hover:bg-white hover:text-gray-800 focus:bg-white active:bg-white active:shadow-none dark:hover:bg-gray-100 dark:focus:bg-gray-100 dark:focus:text-white dark:active:bg-gray-100 dark:active:text-white;
+}
+
+.rbc-toolbar button.rbc-active {
+  @apply border-primary bg-primary text-primary-foreground shadow-none;
+}
+
+.rbc-toolbar-label {
+  @apply font-lexend text-xl font-medium text-gray-900 dark:text-white;
+}
+
+.rbc-agenda-view {
+  @apply border;
+}
+
+.rbc-agenda-view,
+.rbc-agenda-view table.rbc-agenda-table,
+.rbc-agenda-view table.rbc-agenda-table thead > tr > th,
+.rbc-agenda-view table.rbc-agenda-table tbody > tr > td + td {
+  @apply border-muted;
+}
+
+.rbc-agenda-view table.rbc-agenda-table {
+  @apply border-0 border-b;
+}
+
+.rbc-agenda-empty {
+  @apply p-4 text-center;
+}
+
+/* react-colorful */
+.react-colorful {
+  @apply gap-3;
+}
+
+.react-colorful .react-colorful__pointer {
+  @apply h-4 w-4;
+}
+
+.react-colorful .react-colorful__saturation,
+.react-colorful .react-colorful__hue {
+  @apply rounded-md;
+}
+
+.react-colorful .react-colorful__alpha,
+.react-colorful .react-colorful__hue {
+  @apply h-3 rounded-md;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* pos top slider bullets style */
+
+.pos-all-items-top-slider .swiper-pagination {
+  @apply !-bottom-8;
+}
+
+.pos-all-items-top-slider .swiper-pagination span {
+  @apply !mx-[3px] !h-2 !w-2.5 !rounded-full !bg-gray-600 !duration-200;
+}
+.pos-all-items-top-slider
+  .swiper-pagination
+  span.swiper-pagination-bullet-active {
+  @apply !w-4 !bg-gray-400;
+}
+
+/* react calendar customize style */
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  @apply hidden;
+}
+.react-calendar__navigation {
+  @apply items-center;
+}
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button {
+  @apply h-7 w-7 !min-w-[28px] rounded-md !border !border-solid !border-gray-200 !bg-transparent;
+}
+.react-calendar__navigation__label {
+  @apply text-sm font-semibold text-gray-800 disabled:!bg-transparent lg:text-base;
+}
+.react-calendar__month-view__days {
+  @apply gap-x-1 gap-y-2;
+}
+.react-calendar__month-view__days__day {
+  @apply flex h-9 w-9 items-center justify-center rounded-full;
+}
+.react-calendar__month-view__weekdays {
+  @apply mb-4 !text-sm !capitalize;
+}
+.react-calendar__month-view__weekdays__weekday > abbr {
+  @apply font-semibold text-gray-500 no-underline;
+}
+.react-calendar__tile {
+  @apply !basis-[calc(14.2857%-4px)] !text-sm;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  @apply !bg-transparent;
+}
+.react-calendar__tile--active,
+.react-calendar__tile--now {
+  @apply !bg-[#2B7F75];
+}
+.react-calendar__tile--now {
+  @apply !text-gray-0;
+}
+.react-calendar__month-view__days__day--weekend {
+  @apply !text-red-dark;
+}
+
+/* job dashboard calender style  */
+.job-schedule-calendar {
+  @apply !w-full !border-none dark:bg-transparent;
+}
+.job-schedule-calendar .react-calendar__navigation {
+  @apply justify-between px-5 lg:px-7;
+}
+.job-schedule-calendar .react-calendar__navigation__arrow {
+  @apply inline-flex items-center justify-center text-[22px] leading-none;
+}
+.job-schedule-calendar .react-calendar__navigation__next2-button,
+.job-schedule-calendar .react-calendar__navigation__prev2-button {
+  @apply hidden;
+}
+.job-schedule-calendar .react-calendar__month-view__weekdays {
+  @apply mb-0;
+}
+.job-schedule-calendar .react-calendar__month-view__weekdays > div {
+  @apply mb-0 border border-r-0 border-gray-200 bg-gray-50 py-4 font-inter first:border-l-0;
+}
+.job-schedule-calendar .react-calendar__month-view__days {
+  @apply !grid !grid-cols-7 gap-0;
+}
+.job-schedule-calendar .react-calendar__month-view__days > button {
+  @apply h-full !w-full rounded-none border border-s-0 border-t-0 border-solid border-gray-200 px-0 py-4 font-inter dark:hover:!bg-gray-100 dark:focus:!bg-gray-100 [&:nth-child(7n)]:border-r-0;
+}
+.job-schedule-calendar button.react-calendar__tile--active,
+.job-schedule-calendar button.react-calendar__tile--hasActive,
+.job-schedule-calendar button.react-calendar__tile--now {
+  @apply !bg-transparent !text-gray-600  hover:!bg-[#e6e6e6] dark:hover:!bg-gray-100;
+}
+.job-schedule-calendar button.react-calendar__month-view__days__day {
+  @apply relative;
+}
+
+/* job schedule calendar months view */
+.job-schedule-calendar .react-calendar__year-view__months {
+  @apply !grid !grid-cols-4 gap-0 border-t border-gray-200;
+}
+.job-schedule-calendar .react-calendar__year-view__months > button {
+  @apply border border-s-0 border-t-0 border-solid border-gray-200 dark:hover:bg-gray-100 dark:focus:bg-gray-100 [&:nth-child(4n)]:border-r-0;
+}
+
+/* job schedule calendar decades view */
+.job-schedule-calendar .react-calendar__decade-view__years {
+  @apply !grid !grid-cols-5 gap-0 border-t border-gray-200;
+}
+.job-schedule-calendar .react-calendar__decade-view__years > button {
+  @apply border border-s-0 border-t-0 border-solid border-gray-200 dark:hover:bg-gray-100 dark:focus:bg-gray-100 dark:disabled:bg-gray-100 [&:nth-child(5n)]:border-r-0;
+}
+
+/* job schedule calendar century view */
+.job-schedule-calendar .react-calendar__century-view__decades {
+  @apply !grid !grid-cols-4 gap-0 border-t border-gray-200;
+}
+.job-schedule-calendar .react-calendar__century-view__decades > button {
+  @apply border border-s-0 border-t-0 border-solid border-gray-200 dark:hover:bg-gray-100 dark:focus:bg-gray-100 dark:disabled:bg-gray-100 [&:nth-child(4n)]:border-r-0;
+}
+
+/* invoice builder custom styles  */
+@media print {
+  @page {
+    size: auto;
+    margin: 0mm;
+  }
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-container .invoice-print-table-header {
+    @apply !rounded-t-md !bg-gray-100;
+    print-color-adjust: exact;
+  }
+
+  .print-container table thead {
+    display: table-header-group;
+  }
+  .print-container table tfoot {
+    display: table-footer-group;
+  }
+}
