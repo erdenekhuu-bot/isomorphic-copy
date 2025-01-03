@@ -13,6 +13,12 @@ import CheckoutPage from "../../app/(hydrogen)/ecommerce/checkout/page";
 import CartPage from "../../app/(hydrogen)/ecommerce/cart/page";
 import ProfilePage from "../../app/(hydrogen)/profile/page";
 import { Routes, Route } from "react-router-dom";
+import BasicTablePage from "../../app/(hydrogen)/tables/basic/page";
+import CollapsibleTablePage from "../../app/(hydrogen)/tables/collapsible/page";
+import EnhancedTablePage from "../../app/(hydrogen)/tables/enhanced/page";
+import StickyTablePage from "../../app/(hydrogen)/tables/sticky-header/page";
+import PaginationTablePage from "../../app/(hydrogen)/tables/pagination/page";
+import SearchTablePage from "../../app/(hydrogen)/tables/search/page";
 
 export default function HydrogenLayout({
   children,
@@ -41,6 +47,14 @@ export default function HydrogenLayout({
             <Route path="/analytics" element={<AnalyticsPage />} />
             <Route path="/support" element={<SupportDashboardPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="tables">
+              <Route path="basic" element={<BasicTablePage />} />
+              <Route path="collapsible" element={<CollapsibleTablePage />} />
+              <Route path="enhanced" element={<EnhancedTablePage />} />
+              <Route path="sticky-header" element={<StickyTablePage />} />
+              <Route path="pagination" element={<PaginationTablePage />} />
+              <Route path="search" element={<SearchTablePage />} />
+            </Route>
           </Routes>
         </div>
       </div>
